@@ -9,8 +9,6 @@ const bot = new TelegramBot(BOT_TOKEN, { polling: false });
 
 export default async function handler(req, res) {
   console.log('🔴 Incoming request:', req.method);
-  console.log('📥 Body:', JSON.stringify(req.body, null, 2));
-
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
