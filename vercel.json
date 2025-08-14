@@ -3,7 +3,10 @@
   "builds": [
     {
       "src": "src/pages/api/*.ts",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["src/pages/api/*.ts"]
+      }
     }
   ],
   "routes": [
